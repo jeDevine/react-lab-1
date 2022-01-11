@@ -10,11 +10,13 @@ function App() {
       <header className="App-header">
         <h1>Ice Cream Wars</h1>
       </header>
-      <div className="AdDesigner">
-        <AdDesigner />
-      </div>
-      <div className="Votes">
-        <Votes />
+      <div className="box">
+        <div className="AdDesigner">
+          <AdDesigner />
+        </div>
+        <div className="Votes">
+          <Votes />
+        </div>
       </div>
     </div>
   );
