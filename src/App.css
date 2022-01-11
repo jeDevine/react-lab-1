@@ -4,17 +4,6 @@ body {
   font-family: sans-serif;
 }
 
-.box {
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  justify-content: space-around;
-}
-
-.AdDesigner {
-  text-align: center;
-}
-
 .ChocolateBar {
   display: block;
   background-color: rgb(83, 40, 4);
@@ -39,7 +28,12 @@ header {
 }
 
 button {
-  color: #0e3c7e;
+  background-color: #0e3c7e;
+  color: #fff;
+}
+
+button:disabled {
+  background-color: grey;
 }
 
 .ad {
@@ -59,4 +53,18 @@ button {
   background-color: #222;
   color: #fff;
   border: 5px solid teal;
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  
+  .AdDesigner {
+    text-align: center;
+  }
+  
 }
