@@ -1,8 +1,15 @@
 import React, {useState} from 'react';
 
-const AdDesigner = () => {
+interface Props {
+    flavor: string;
+    fontSize: number;
+    darkTheme: boolean;
+}
+
+const AdDesigner = ({flavor, fontSize, darkTheme}:Props) => {
     const [choice, setChoice] = useState("");
-    const [potato, setPotato] = useState(true);
+    const initialState = darkTheme ? false : true;
+    const [potato, setPotato] = useState(initialState);
     const [total, setTotal] = useState(20);
     let theme = "";
     {potato ? theme="light" : theme="dark"};
@@ -13,7 +20,7 @@ const AdDesigner = () => {
             <h2>Ad Designer</h2>
             <div className={"ad " + theme}>
                 <p>Vote For</p>
-                <p className="chosenAd" style={{fontSize: total}}>{choice}</p>
+                {choice ? <p className="chosenAd" style={{fontSize: total}}>{choice}</p> : <p style={{fontSize: fontSize}}>{flavor}</p>}
             </div>
             <div className="choice">
                 <p>What to Support</p>

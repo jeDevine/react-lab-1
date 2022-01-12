@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lato&display=swap');
 
 body {
+  margin: 10px;
   font-family: sans-serif;
 }
 
@@ -21,6 +22,8 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-around;
   color: #0e3c7e;
   font-family: 'Caveat', cursive;
   font-weight: bold;
@@ -67,4 +70,7 @@ button:disabled {
     text-align: center;
   }
   
+  .AdDesignerBox {
+    display: flex;
+  }
 }
